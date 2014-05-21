@@ -1,6 +1,6 @@
 {
   "name": "thebulk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a simple, content agnostic, bulk data generator",
   "main": "thebulk.js",
   "scripts": {
@@ -19,9 +19,6 @@
   },
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "should": "~3.3.1"
   },
   "repository": {
     "type": "git",
