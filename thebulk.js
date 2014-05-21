@@ -5,7 +5,7 @@ var TheBulk = function () {
   return this;
 };
 
-TheBulk.prototype.float = TheBulk.prototype.long = function () {
+TheBulk.prototype.float = TheBulk.prototype.long = TheBulk.prototype.double = function () {
   return Math.random ()*100;
 };
 

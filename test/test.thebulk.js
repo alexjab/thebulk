@@ -18,6 +18,7 @@ describe ('TheBulk.float ()', function () {
     var thebulk = new TheBulk ();
     thebulk.float ().should.be.type ('number');
     thebulk.long ().should.be.type ('number');
+    thebulk.double ().should.be.type ('number');
     (thebulk.float ().toString ().search (/\./)).should.not.equal (-1);
     (thebulk.float () >= 0).should.be.true;
     (thebulk.float () <= 100).should.be.true;
@@ -84,6 +85,20 @@ describe ('TheBulk.obj ()', function () {
     thebulk.obj ().should.not.be.eql ({});
     thebulk.object ().should.not.be.eql ({});
     thebulk.json ().should.not.be.eql ({});
+    done ();
+  });
+});
+
+
+describe ('Examples: ', function () {
+  it ('should generate data that can be visually aknowledged by a human ☼', function (done) {
+    var thebulk = new TheBulk ();
+    console.log (thebulk.float ());
+    console.log (thebulk.int ());
+    console.log (thebulk.char ());
+    console.log (thebulk.string ());
+    console.log (thebulk.bool ());
+    console.log (JSON.stringify (thebulk.obj (), null, 2));
     done ();
   });
 });
