@@ -1,7 +1,9 @@
 thebulk
 =======
 
-a simple, content agnostic, bulk data generator
+[![NPM version](https://badge.fury.io/js/thebulk.svg)](http://badge.fury.io/js/thebulk)
+
+a simple, content agnostic, bulk data generator for node.js
 
 TheBulk generates bulk data for your programs, and frees you from the tedious task of comming up with dummy data.
 
