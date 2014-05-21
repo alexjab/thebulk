@@ -1,0 +1,15 @@
+{
+  "name": "thebulk",
+  "version": "0.0.1",
+  "description": "a simple, content agnostic, bulk data generator",
+  "main": "thebulk.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "random",
+    "data"
+  ],
+  "author": "alexjab <alexandre.jablon@gmail.com> (http://jablon.me/)",
+  "license": "MIT"
+}
