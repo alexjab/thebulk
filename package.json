@@ -1,6 +1,6 @@
 {
   "name": "thebulk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a simple, content agnostic, bulk data generator",
   "main": "thebulk.js",
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "keywords": [
     "random",
+    "bulk",
     "data"
   ],
   "author": "alexjab <alexandre.jablon@gmail.com> (http://jablon.me/)",
@@ -15,5 +16,19 @@
   "devDependencies": {
     "should": "~3.3.1",
     "mocha": "~1.19.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "should": "~3.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexjab/thebulk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexjab/thebulk/issues"
+  },
+  "homepage": "https://github.com/alexjab/thebulk"
 }
