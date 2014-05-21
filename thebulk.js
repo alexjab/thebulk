@@ -1,6 +1,8 @@
 var words = require ('./words.js');
 
 var TheBulk = function () {
+  this.words = words;
+  return this;
 };
 
 TheBulk.prototype.float = TheBulk.prototype.long = function () {
@@ -16,7 +18,7 @@ TheBulk.prototype.char = TheBulk.prototype.character = function () {
 };
 
 TheBulk.prototype.string = function () {
-  return words[Math.round (Math.random ()*(words.length - 1))];
+  return this.words[Math.round (Math.random ()*(this.words.length - 1))];
 };
 
 TheBulk.prototype.bool = TheBulk.prototype.boolean = function () {
@@ -31,18 +33,18 @@ TheBulk.prototype.obj = TheBulk.prototype.object = TheBulk.prototype.json = func
       for (var i=1;i<=number;i++) {
         var down = (level > 1 && Math.random () < 1/(level+1));
         if (level === 1 || down) {
-          object[self.string.call (this)] = generateObject ({}, level+1);
+          object[self.string.call (self)] = generateObject ({}, level+1);
         } else {
-          object[self.string.call (this)] = self.string.call (this);
+          object[self.string.call (self)] = self.string.call (self);
         }
       };
     } else {
-      object[self.string.call (this)] = self.string.call (this);
+      object[self.string.call (self)] = self.string.call (self);
     }
     return object;
   };
   return generateObject ({}, 1);
 };
 
-exports.TheBulk = TheBulk;
+module.exports = TheBulk;
 
