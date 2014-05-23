@@ -46,5 +46,9 @@ TheBulk.prototype.obj = TheBulk.prototype.object = TheBulk.prototype.json = func
   return generateObject ({}, 1);
 };
 
+TheBulk.prototype.more = TheBulk.prototype.array = function (fun) {
+  return [null, null, null, null, null, null, null, null, null, null].map (fun, this);
+};
+
 module.exports = TheBulk;
 

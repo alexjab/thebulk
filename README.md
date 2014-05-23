@@ -3,7 +3,7 @@ thebulk
 
 [![NPM version](https://badge.fury.io/js/thebulk.svg)](http://badge.fury.io/js/thebulk)
 
-a simple, content agnostic, bulk data generator for node.js
+A simple, content agnostic, bulk data generator for node.js
 
 TheBulk generates bulk data for your programs, and frees you from the tedious task of comming up with dummy data.
 
@@ -116,6 +116,31 @@ thebulk.obj ();
     }
   }
 */
+```
+
+###TheBulk.more(fun)
+Returns a list of 10 things. You can use it in composition with any generating method from TheBulk, or with any other function as well.
+
+Arguments:
+
+ - `fun [function][Mandatory]`, a function that must `return` something.
+
+####Alias
+`TheBulk.array()`
+
+####Examples
+```
+thebulk.more(thebulk.int);
+// Generates a list of integers
+// => [ 70, 98, 91, 80, 61, 43, 1, 20, 71, 93 ]
+
+thebulk.more(thebulk.bool);
+// Generates a list of booleans
+// => [ false, false, true, true, false, false, false, true, false, true ]
+
+thebulk.more(function () {return MagicHat.popStuffOut ();});
+// Generates
+// => [ dove, dove, rabbit, baloons, rabbit, cat, baloons, rabbit, rabbit, dove ]
 ```
 
 ##Testing
