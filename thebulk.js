@@ -17,7 +17,7 @@ TheBulk.prototype.char = TheBulk.prototype.character = function () {
   return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.round (Math.random ()*51)];
 };
 
-TheBulk.prototype.string = function () {
+TheBulk.prototype.string = TheBulk.prototype.word = function () {
   return this.words[Math.round (Math.random ()*(this.words.length - 1))];
 };
 
