@@ -13,8 +13,7 @@ Its primary use is in unit tests.
 `npm install thebulk`
 
 ```
-var TheBulk = require('thebulk');
-var thebulk = new TheBulk();
+var thebulk = require('thebulk');
 
 thebulk.float();
 thebulk.int();
